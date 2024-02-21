@@ -2,8 +2,9 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Nunito', sans-serif;
-    font-size: 16px; /* Smaller base font size for mobile */
+    font-size: 16px; /* Base font size */
     line-height: 1.6;
+    width: 100%; /* Ensure the body takes full width */
 }
 
 .hero {
@@ -13,47 +14,65 @@ body, html {
     background-size: cover;
     color: white;
     text-align: center;
-    padding: 60px 20px; /* Adjust padding for smaller screens */
+    padding: 60px 20px;
 }
 
 .content, .footer {
     padding: 20px;
-    text-align: center; /* Center content for smaller screens */
+    text-align: center;
+    width: 100%; /* Ensure content and footer take full width */
 }
 
 .section {
     margin-bottom: 20px;
 }
 
+/* Responsive iframe for embedded presentation */
+iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+    max-width: 960px; /* Maximum width */
+    max-height: 569px; /* Maximum height */
+}
+
 a {
     color: #007bff;
-    display: inline-block; /* Ensure links are easily tappable */
-    margin: 5px 0; /* Add some space around links */
+    display: inline-block;
+    margin: 5px 0;
 }
 
 a:hover {
     color: #0056b3;
 }
 
-/* Responsive Images */
 img, video {
     max-width: 100%;
     height: auto;
 }
 
-/* Media Queries for Tablets and Desktops */
+.footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative; /* Change to relative */
+    width: 100%; /* Ensure footer background spans full width */
+}
+
+/* Media Queries */
 @media (min-width: 768px) {
     .hero {
-        padding: 120px 20px; /* Increase padding for larger screens */
+        padding: 120px 20px;
     }
 
     .content, .footer {
         padding: 40px;
-        text-align: left; /* Align text to the left on larger screens */
+        text-align: left;
     }
 
     body {
-        font-size: 18px; /* Increase font size for larger screens */
+        font-size: 18px;
     }
 
     .section {
@@ -61,15 +80,14 @@ img, video {
     }
 }
 
-/* Larger Desktops */
 @media (min-width: 992px) {
     .container {
         width: 85%;
         max-width: 1200px;
-        margin: auto; /* Center the container */
+        margin: auto;
     }
 
     body {
-        font-size: 20px; /* Further increase font size for larger screens */
+        font-size: 20px;
     }
 }
