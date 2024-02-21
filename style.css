@@ -1,41 +1,75 @@
 body, html {
-    height: 100%;
     margin: 0;
+    padding: 0;
     font-family: 'Nunito', sans-serif;
+    font-size: 16px; /* Smaller base font size for mobile */
+    line-height: 1.6;
 }
+
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?data science');
-    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/1600x900/?technology');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
     color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     text-align: center;
+    padding: 60px 20px; /* Adjust padding for smaller screens */
 }
-.content {
-    padding: 40px;
+
+.content, .footer {
+    padding: 20px;
+    text-align: center; /* Center content for smaller screens */
 }
+
 .section {
-    margin-top: 30px;
+    margin-bottom: 20px;
 }
-.footer {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
+
 a {
     color: #007bff;
+    display: inline-block; /* Ensure links are easily tappable */
+    margin: 5px 0; /* Add some space around links */
 }
+
 a:hover {
-    text-decoration: none;
     color: #0056b3;
+}
+
+/* Responsive Images */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Media Queries for Tablets and Desktops */
+@media (min-width: 768px) {
+    .hero {
+        padding: 120px 20px; /* Increase padding for larger screens */
+    }
+
+    .content, .footer {
+        padding: 40px;
+        text-align: left; /* Align text to the left on larger screens */
+    }
+
+    body {
+        font-size: 18px; /* Increase font size for larger screens */
+    }
+
+    .section {
+        margin-bottom: 40px;
+    }
+}
+
+/* Larger Desktops */
+@media (min-width: 992px) {
+    .container {
+        width: 85%;
+        max-width: 1200px;
+        margin: auto; /* Center the container */
+    }
+
+    body {
+        font-size: 20px; /* Further increase font size for larger screens */
+    }
 }
