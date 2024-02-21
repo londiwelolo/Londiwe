@@ -31,9 +31,15 @@ body, html {
 iframe {
     width: 100%;
     height: auto;
-    aspect-ratio: 16 / 9; /* Maintain aspect ratio */
-    max-width: 960px; /* Maximum width */
-    max-height: 569px; /* Maximum height */
+    max-width: 960px; /* Adjust if necessary */
+    max-height: 569px; /* Adjust if necessary */
+    aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 768px) {
+    iframe {
+        height: 300px; /* Adjust height for smaller devices */
+    }
 }
 
 a {
@@ -55,9 +61,8 @@ img, video {
     background-color: #007bff;
     color: white;
     text-align: center;
-    padding: 10px;
-    position: relative; /* Change to relative */
-    width: 100%; /* Ensure footer background spans full width */
+    padding: 20px 10px; /* Increase padding for better appearance */
+    width: 100%;
 }
 
 /* Media Queries */
